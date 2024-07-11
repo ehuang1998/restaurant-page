@@ -2,9 +2,11 @@ import Photo from './img/photo.jpg';
 
 export default function renderHome() {
 
+    const pageContent = document.createElement('div');
     const homePage = document.createElement('div');
     const message = document.createElement('div');
 
+    pageContent.classList.add('page-content');
     homePage.setAttribute('id', 'home-page');
     message.setAttribute('id', 'message');
 
@@ -18,7 +20,9 @@ export default function renderHome() {
     homePage.appendChild(myPhoto);
     homePage.appendChild(message);
 
-    return homePage;
+    pageContent.appendChild(homePage);
+
+    return pageContent;
 
 }
 
